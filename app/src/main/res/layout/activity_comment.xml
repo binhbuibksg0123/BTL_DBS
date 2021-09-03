@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+        <RatingBar
+                            android:id="@+id/ratingBarSer"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:stepSize="1"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvAddressBuy"
+                            app:layout_constraintEnd_toEndOf="@+id/ratingBarEva"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/ratingBarShip"
+                            app:layout_constraintTop_toTopOf="@+id/tvAddressBuy"
+                            app:layout_constraintVertical_bias="0.529" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBarShip"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:stepSize="1"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvCost"
+                            app:layout_constraintEnd_toEndOf="@+id/ratingBarEva"
+                            app:layout_constraintStart_toStartOf="@+id/ratingBarEva"
+                            app:layout_constraintTop_toTopOf="@+id/tvCost" />
+
+                        <ImageView
+                            android:id="@+id/avtOrderBuy"
+                            android:layout_width="200dp"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="25dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <Button
+                            android:id="@+id/btnOder"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="Comment"
+                            android:textAllCaps="false"
+                            app:layout_constraintEnd_toEndOf="@+id/edxComment0123"
+                            app:layout_constraintHorizontal_bias="0.54"
+                            app:layout_constraintStart_toStartOf="@+id/edxComment0123"
+                            app:layout_constraintTop_toBottomOf="@+id/edxComment0123" />
+
+                        <TextView
+                            android:id="@+id/tvNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="40dp"
+                            android:text="Evaluate: "
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvBookNameBuy" />
+
+                        <TextView
+                            android:id="@+id/tvCost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="Shipping Quality: "
+                            app:layout_constraintStart_toStartOf="@+id/tvNumber"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNumber" />
+
+                        <TextView
+                            android:id="@+id/tvAddressBuy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="Service Quality: "
+                            app:layout_constraintStart_toStartOf="@+id/tvCost"
+                            app:layout_constraintTop_toBottomOf="@+id/tvCost" />
+
+                        <TextView
+                            android:id="@+id/tvBookNameBuy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="TextView"
+                            app:layout_constraintEnd_toEndOf="@+id/avtOrderBuy"
+                            app:layout_constraintStart_toStartOf="@+id/avtOrderBuy"
+                            app:layout_constraintTop_toBottomOf="@+id/avtOrderBuy" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBarEva"
+                            style="@android:style/Widget.Material.Light.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginEnd="40dp"
+                            android:isIndicator="false"
+                            android:stepSize="1"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvNumber"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tvNumber"
+                            app:layout_constraintTop_toTopOf="@+id/tvNumber" />
+
+                        <EditText
+                            android:id="@+id/edxComment0123"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:ems="10"
+                            android:hint="Comment..."
+                            android:inputType="textPersonName"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvAddressBuy" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCmt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btnOder" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

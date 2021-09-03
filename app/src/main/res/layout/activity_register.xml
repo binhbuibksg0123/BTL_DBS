@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:id="@+id/parrent"
+    >
+
+    <EditText
+        android:id="@+id/edxUserNameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/ic_action_name"
+        android:ems="10"
+        android:hint="User name..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edxMname" />
+
+    <EditText
+        android:id="@+id/edxPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/ic_action_lock"
+        android:ems="10"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edxUserNameRegister"
+        app:layout_constraintStart_toStartOf="@+id/edxUserNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/edxUserNameRegister" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/edxPasswordRegister"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/edxPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/tvDayOfBirthShow" />
+
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/alex_brush"
+        android:text="Register"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edxFname"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="First name..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/edxMname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edxMname" />
+
+    <EditText
+        android:id="@+id/edxMname"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Middle name..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/edxLname"
+        app:layout_constraintStart_toEndOf="@+id/edxFname"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+    <EditText
+        android:id="@+id/edxLname"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Last name..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/edxMname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edxMname" />
+
+    <EditText
+        android:id="@+id/edxEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Email..."
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edxPasswordRegister"
+        android:drawableEnd="@drawable/ic_action_email"
+        />
+
+    <EditText
+        android:id="@+id/edxPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Phone Number..."
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edxEmail"
+        android:drawableEnd="@drawable/ic_action_phone"
+        />
+
+    <EditText
+        android:id="@+id/edxAnddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Address..."
+        android:inputType="textPostalAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edxPhoneNumber"
+        android:drawableEnd="@drawable/ic_action_address"
+        />
+
+
+    <TextView
+        android:id="@+id/tvDateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:text="Date Of Birth:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edxAnddress"
+
+        />
+
+    <TextView
+        android:id="@+id/tvDayOfBirthShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="01/01/1990"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDateOfBirth"
+        app:layout_constraintEnd_toStartOf="@+id/gender"
+        app:layout_constraintStart_toEndOf="@+id/tvDateOfBirth"
+        app:layout_constraintTop_toTopOf="@+id/tvDateOfBirth" />
+
+    <Switch
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="Female"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDayOfBirthShow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDayOfBirthShow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
