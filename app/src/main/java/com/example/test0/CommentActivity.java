@@ -96,7 +96,6 @@ public class CommentActivity extends AppCompatActivity {
                 }
                 catch (Exception e){
                 }
-                Toast.makeText(CommentActivity.this, "Commented", Toast.LENGTH_LONG).show();
                 adapter.comments.add(0,new comment(nameUser,dateTime,Comment,ratingEva,ratingShip,ratingSer,customerID));
                 adapter.notifyItemInserted(0);
             }

@@ -3,6 +3,7 @@ package com.example.test0;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -30,8 +31,9 @@ public class Login extends AppCompatActivity {
     TextView tvSignUp,tvLogin,tvLoad,changePass;
     ProgressBar progessBar;
     ConstraintLayout layout;
-    Connection connect = ConnectionHelper.getConnect();
+    Connection connect=ConnectionHelper.getConnect();;
     String connectionResult = "";
+    private ProgressDialog mProgressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

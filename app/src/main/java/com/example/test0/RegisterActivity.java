@@ -117,21 +117,22 @@ public class RegisterActivity extends AppCompatActivity implements DatePickerDia
             Log.e("Exception",e.toString());
         }
         try {
-            Log.d("Error register","Registered");
+            Log.d("Entered","Entered");
             Statement smt = connect.createStatement();
-            smt.executeQuery("  INSERT INTO [EBook].[EBook].[Customer]\n" +
-                    "  VALUES('"+fName+"','"+mName+"','"+lName+"','"+Gender+"','"+DayOfBirth+"','"+address+"','"+Phone+"','"+Email+"','"+passWord+"','"+username+"','"+random_id+"')");
+            smt.executeQuery("INSERT INTO [EBook].[EBook].[Customer]\n" +
+                    "  VALUES('"+fName+"','"+mName+"','"+lName+"','"+Gender+"','"+DayOfBirth+"','"+address+"','"+Phone+"','"+Email+"','"+passWord+"','"+username+"','"+random_id+"',null,0)");
         }
         catch (Exception e){
             Log.d("Error register",e.toString());
         }
+        JavaMailAPI mailApt = new JavaMailAPI(this,Email,"Register MyOurBook","Your CustomerID is "+random_id);
+        mailApt.execute();
         Intent intent = new Intent(RegisterActivity.this,Login.class);
         startActivity(intent);
         finish();
     }
     @Override
     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-        dayOfBirth.setText(i2+"-"+i1+"-"+i);
-
+        dayOfBirth.setText(i+"-"+i1+"-"+i2);
     }
 }
